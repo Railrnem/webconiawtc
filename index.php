@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <form action="api.php" methode="post">
+    <form action="api.php" method="post">
         Vorname:  <input type="text" name="vorname"><br>
         Nachname: <input type="text" name="nachname"><br>
         E-Mail:   <input type="text" name="email"><br>
