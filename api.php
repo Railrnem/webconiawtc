@@ -1,8 +1,5 @@
 <?php
-    $servername="localhost";
-    $username="webconiawtc";
-    $password="nwWhUPS8JrV5uzX";
-    $dbname ="webconiawtc";
+    include "private/dbconnection.inc.php";
 
     $con = new mysqli($servername, $username, $password, $dbname);
 
@@ -10,7 +7,7 @@
     {
         die("Connection failed: " . $con-connect_error);
     }
-    
+
     $sql = "INSERT INTO `teilnehmer` (`t_id`, `vorname`, `nachname`, `email`, `firma`) VALUES (NULL, '"
         . $_POST["vorname"] .  "', '" 
         . $_POST["nachname"] . "', '" 
