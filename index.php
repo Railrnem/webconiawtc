@@ -73,11 +73,12 @@ function test_input($data) {
 </head>
 
 <body>
+    <p>* benötigte Felder</p>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        Vorname:  <input type="text" name="vorname"><span class="error">* <?php echo $vornameErr;?></span><br>
-        Nachname: <input type="text" name="nachname"><span class="error">* <?php echo $nachnameErr;?></span><br>
-        E-Mail:   <input type="text" name="email"><span class="error">* <?php echo $emailErr;?></span><br>
-        Firma:    <input type="text" name="firma"><span class="error">* <?php echo $firmaErr;?></span><br>
+        Vorname:  <input type="text" name="vorname" value="<?php echo $vorname;?>"><span class="error">* <?php echo $vornameErr;?></span><br>
+        Nachname: <input type="text" name="nachname" value="<?php echo $nachname;?>"><span class="error">* <?php echo $nachnameErr;?></span><br>
+        E-Mail:   <input type="text" name="email" value="<?php echo $email;?>"><span class="error">* <?php echo $emailErr;?></span><br>
+        Firma:    <input type="text" name="firma" value="<?php echo $firma;?>"><span class="error">* <?php echo $firmaErr;?></span><br>
         <input type="submit" name="Submit">
     </form>
 </body>
