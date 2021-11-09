@@ -10,6 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
     $vornameErr = "";
     $vorname = test_input($_POST["vorname"]);
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$vorname)) 
+    {
+        $vornameErr = "Es sind nur Buchstaben und Leerzeichen erlaubt";
+    }
     }
 
   if (empty($_POST["nachname"])) 
@@ -19,6 +23,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
     $nachnameErr = "";
     $nachname = test_input($_POST["nachname"]);
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$nachname)) 
+    {
+        $nachnameErr = "Es sind nur Buchstaben und Leerzeichen erlaubt";
+    }
     }
 
   if (empty($_POST["email"])) 
@@ -41,6 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
     $firmaErr = "";
     $firma = test_input($_POST["firma"]);
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$firma)) 
+    {
+        $firmaErr = "Es sind nur Buchstaben und Leerzeichen erlaubt";
+    }
   }
 }
 
