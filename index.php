@@ -98,10 +98,10 @@ function test_input($data) {
             }
 
             $sql = "INSERT INTO `teilnehmer` (`t_id`, `vorname`, `nachname`, `email`, `firma`) VALUES (NULL, '"
-                . $_POST["vorname"] .  "', '" 
-                . $_POST["nachname"] . "', '" 
-                . $_POST["email"] .    "', '" 
-                . $_POST["firma"] .    "');";
+                . $vorname .  "', '" 
+                . $nachname . "', '" 
+                . $email .    "', '" 
+                . $firma .    "');";
             
             if($con->query($sql) === TRUE)
             {
