@@ -49,9 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
     $firmaErr = "";
     $firma = test_input($_POST["firma"]);
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$firma)) 
+    if (!preg_match("/^[a-zA-Z0-9-' ]*$/",$firma)) 
     {
-        $firmaErr = "Es sind nur Buchstaben und Leerzeichen erlaubt";
+        $firmaErr = "Es sind nur Buchstaben, Zahlen und Leerzeichen erlaubt";
     }
   }
 }
