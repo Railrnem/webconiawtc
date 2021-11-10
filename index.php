@@ -70,17 +70,47 @@ function test_input($data) {
 <head>
     <meta charset="utf-8">
     <title>WTC Teilnahmebestätigung</title>
+    <style>
+      body {background: #DCDCDC;}
+      h1 {text-align: center;}
+      p {
+        padding-left: 45%;
+      }
+      form {
+        padding-left: 45%;
+        text-align: left;
+        height: 100px;
+      }
+      div {
+        background-color: #FFFFFF;
+        height: 300px;
+        border: 15px;
+        padding: 50px;
+        margin: 100px;
+      }
+    </style>
 </head>
 
 <body>
-    <p>* benötigte Felder</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-        Vorname:  <input type="text" name="vorname" value="<?php echo $vorname;?>"><span class="error">* <?php echo $vornameErr;?></span><br>
-        Nachname: <input type="text" name="nachname" value="<?php echo $nachname;?>"><span class="error">* <?php echo $nachnameErr;?></span><br>
-        E-Mail:   <input type="text" name="email" value="<?php echo $email;?>"><span class="error">* <?php echo $emailErr;?></span><br>
-        Firma:    <input type="text" name="firma" value="<?php echo $firma;?>"><span class="error">* <?php echo $firmaErr;?></span><br>
-        <input type="submit" name="Submit">
-    </form>
+    <div>
+      <h1>webconia Technology Conference</h1>
+      <p>* benötigte Felder</p>
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+          <label for="vorname">Vorname:</label><br>
+          <input type="text" name="vorname" value="<?php echo $vorname;?>"><span class="error">* <?php echo $vornameErr;?></span><br>
+
+          <label for="vorname">Nachname:</label><br>
+          <input type="text" name="nachname" value="<?php echo $nachname;?>"><span class="error">* <?php echo $nachnameErr;?></span><br>
+
+          <label for="vorname">E-Mail:</label><br>
+          <input type="text" name="email" value="<?php echo $email;?>"><span class="error">* <?php echo $emailErr;?></span><br>
+
+          <label for="vorname">Firma:</label><br>     
+          <input type="text" name="firma" value="<?php echo $firma;?>"><span class="error">* <?php echo $firmaErr;?></span><br>
+
+          <input type="submit" name="Submit">
+      </form>
+    </div>
 </body>
 
 </html>
